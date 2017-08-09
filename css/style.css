@@ -2,3 +2,6 @@ body {
 	background-color: black;
 	color: limegreen;
 }
+body p {
+	width: 800;
+}
