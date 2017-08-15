@@ -1,7 +1,7 @@
 body {
 	background-color: black;
 	color: limegreen;
-}
-body p {
-	width: 800;
+	width: 800px;
+	display: block;
+	margin: 0 auto;
 }

@@ -1,0 +1,25 @@
+Aliases:
+
+alias src='source'
+alias h='history'
+
+PS1:
+
+*****************************
+AWS CONNECT TO SERVER:
+ssh
+
+SECURE COPY TO AND FROM SERVER:
+
+scp
+
+*****************************
+
+AWS Keys:
+
+AWS EC2 URLS:
+ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com
+
+AWS LINUX AND APACHE SET UP:
+
+******************************
