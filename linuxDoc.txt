@@ -3,7 +3,9 @@ Aliases:
 alias src='source'
 alias h='history'
 
+
 PS1:
+\[\033[95m\]\W\[\033[92m\]$(__git_ps1 "(%s)")\[\033[91m\] > \[\033[96m\]
 
 *****************************
 AWS CONNECT TO SERVER:
