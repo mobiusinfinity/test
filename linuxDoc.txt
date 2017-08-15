@@ -1,11 +1,22 @@
 Aliases:
 
-alias src='source'
+alias cls='clear'
+alias subl='/mnt/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
+alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+alias lh='ls -lah --color=auto'
+alias cdh='cd ~/../mnt/c/Users/Hopi/Desktop/linuxBash'
 alias h='history'
+alias home='cd ~'
+alias src='source'
 
 
 PS1:
-\[\033[95m\]\W\[\033[92m\]$(__git_ps1 "(%s)")\[\033[91m\] > \[\033[96m\]
+// Add to ~/.bashrc
+export PS1='\[\033[95m\]\W\[\033[92m\]$(__git_ps1 "(%s)")\[\033[91m\] > \[\033[96m\] '
+
+CHANGE DIR COLOR:
+// Add to ~/.bashrc
+LS_COLORS=$LS_COLORS:'di=1;32:' ; export LS_COLORS
 
 *****************************
 AWS CONNECT TO SERVER:
@@ -13,7 +24,16 @@ ssh
 
 SECURE COPY TO AND FROM SERVER:
 
-scp
+scp -i /path/my-key-pair.pem ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com:~/SampleFile.txt ~/SampleFile2.txt
+
+// from local to remote: 
+scp -i ~/.. ./index2.html ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:../../var/www/html
+
+// from remote to local
+scp -i ~/../tmp/linuxbashkey2.pem ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:../../var/www/html/index2.html ./index3.html
+
+// use "-r" for recursive through folder, and "-i" for using an ssh key
+scp -ri ~/../tmp/linuxbashkey2.pem ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:/ ./FromAWS
 
 *****************************
 
@@ -24,4 +44,30 @@ ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com
 
 AWS LINUX AND APACHE SET UP:
 
+// change permissing to strict only user can write
+
+chmod 400 /path/my-key-pair.pem
+
+// ssh into ec2
+ssh -i /path/my-key-pair.pem ubuntu@ec2-198-51-100-1.compute-1.amazonaws.com
+
 ******************************
+MYSQL:
+// Local:
+// without password
+mysql -u root 
+
+//with password
+mysql -u root -p "password" 
+
+//start stop and restart
+sudo /etc/init.d/mysql start
+
+sudo /etc/init.d/mysql stop
+
+sudo /etc/init.d/mysql restart
+
+
+
+******************************
+GIT:
