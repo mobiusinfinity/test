@@ -1,0 +1,31 @@
+hi this is a old file i guies its old anyway ... old
+
+ao wha dfh d dfh fdf ff dg agjkgnjg g j ggj dgjd g dgjkjsd ggds gj 
+g
+g
+ gd
+gdgdgdgd
+gd
+ggdggdgdg
+gdg
+ggg g fg f hhtrhthjkjk jk krkjkjjk  j
+
+bash: ll: command not found
+total 8.0K
+drwxrwxrwx 0 root root  512 Aug 24 01:34 .
+drwxr-xr-x 0 root root  512 Aug 23 02:35 ..
+-rw-rw-rw- 1 root root  195 Aug 24 01:25 test.txt
+-rw-rw-rw- 1 root root 1.0K Aug 24 01:34 .test.txt.swp
+-u
+hi this is a old file i guies its old anyway ... old
+
+ao wha dfh d dfh fdf ff dg agjkgnjg g j ggj dgjd g dgjkjsd ggds gj 
+g
+g
+ gd
+gdgdgdgd
+gd
+ggdggdgdg
+gdg
+ggg g fg f hhtrhthjkjk jk krkjkjjk  j
+

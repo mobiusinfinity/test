@@ -8,6 +8,8 @@ alias cdh='cd ~/../mnt/c/Users/Hopi/Desktop/linuxBash'
 alias h='history'
 alias home='cd ~'
 alias src='source'
+alias mcd='&& cd "$_"'
+
 
 
 PS1:
@@ -21,13 +23,14 @@ LS_COLORS=$LS_COLORS:'di=1;32:' ; export LS_COLORS
 *****************************
 AWS CONNECT TO SERVER:
 ssh
+ssh -i ~/../tmp/linuxbashkey2.pem ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com
 
 SECURE COPY TO AND FROM SERVER:
 
 scp -i /path/my-key-pair.pem ec2-user@ec2-198-51-100-1.compute-1.amazonaws.com:~/SampleFile.txt ~/SampleFile2.txt
 
 // from local to remote: 
-scp -i ~/.. ./index2.html ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:../../var/www/html
+scp -i ~/../tmp/linuxbashkey2.pem ./index2.html ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:../../var/www/html
 
 // from remote to local
 scp -i ~/../tmp/linuxbashkey2.pem ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com:../../var/www/html/index2.html ./index3.html
@@ -51,6 +54,9 @@ chmod 400 /path/my-key-pair.pem
 // ssh into ec2
 ssh -i /path/my-key-pair.pem ubuntu@ec2-198-51-100-1.compute-1.amazonaws.com
 
+ssh -i ~/../tmp/linuxbashkey2.pem ubuntu@ec2-54-153-150-203.ap-southeast-2.compute.amazonaws.com
+
+
 ******************************
 MYSQL:
 // Local:
@@ -68,6 +74,11 @@ sudo /etc/init.d/mysql stop
 sudo /etc/init.d/mysql restart
 
 
+//export db
+mysqldump -u USER -p DATABASE > backup.sql
+
+//import
+mysql -u USER -p DATABASE < backup.sql
 
 ******************************
 GIT:
